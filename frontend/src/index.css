@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-svg {
+    background-image: url('/bg.svg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    color: rgb(254 252 232);
+    color: #E9E9E9;
+    color: white;
+}
+
+/* App.css */
+
+.custom-toast {
+    position: relative;
+    left: 90px;
+    top: 3px;
+    background: #1c222b;
+    color: #E9E9E9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
