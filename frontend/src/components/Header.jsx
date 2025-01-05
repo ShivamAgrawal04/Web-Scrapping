@@ -7,7 +7,10 @@ const Header = () => {
 
   return (
     <div className=" text-[#E9E9E9] flex justify-between items-center px-12 h-14 bg-[#151A21]">
-      <Link className="text-2xl" to="/">
+      <Link
+        className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text "
+        to="/"
+      >
         Vulnerabilities
       </Link>
       <div className="flex justify-center items-center gap-8 text-[1.1rem]">

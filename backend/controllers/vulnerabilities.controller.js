@@ -31,3 +31,23 @@ export const showData = async (req, res) => {
     });
   }
 };
+
+export const showTotalVulnerabilities = async (req, res) => {
+  try {
+    const totalVulnerabilitiesCount = await Vulnerability.countDocuments();
+    const criticalVulnerabilitiesCount = await Vulnerability.countDocuments({
+      severity: "Critical",
+    });
+    const highVulnerabilitiesCount = await Vulnerability.countDocuments({
+      severity: "High",
+    });
+    res.json({
+      total: totalVulnerabilitiesCount,
+      critical: criticalVulnerabilitiesCount,
+      high: highVulnerabilitiesCount,
+    });
+  } catch (error) {
+    console.error("Error fetching total vulnerabilities:", error);
+    return res.status(500).json({ message: "Server error" });
+  }
+};

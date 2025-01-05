@@ -16,6 +16,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Side from "./components/Side";
+import About from "./pages/About";
+import Services from "./pages/Services";
 
 // protect routes that require authentication
 const ProtectedRoute = ({ children }) => {
@@ -66,6 +68,9 @@ function App() {
               }}
             />
             <Routes>
+              <Route path="/service" element={<Services />} />
+
+              <Route path="/about" element={<About />} />
               <Route path="/" element={<Home />} />
               <Route
                 path="/dashboard"
